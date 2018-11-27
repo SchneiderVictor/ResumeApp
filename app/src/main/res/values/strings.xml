@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Resume App</string>
+    <string name="profile_picture_description">Portfolio Profile Picture</string>
 </resources>
