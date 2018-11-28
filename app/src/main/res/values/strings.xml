@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Resume App</string>
     <string name="profile_picture_description">Portfolio Profile Picture</string>
+    <string name="ring_description">simple growing ring</string>
 </resources>
