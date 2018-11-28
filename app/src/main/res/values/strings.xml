@@ -2,4 +2,8 @@
     <string name="app_name">Resume App</string>
     <string name="profile_picture_description">Portfolio Profile Picture</string>
     <string name="ring_description">simple growing ring</string>
+    <string name="home_label">HOME</string>
+    <string name="projects_label">PROJECTS</string>
+    <string name="work_label">WORK</string>
+    <string name="contact_label">CONTACT</string>
 </resources>
