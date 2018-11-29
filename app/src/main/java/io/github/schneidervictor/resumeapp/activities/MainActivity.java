@@ -1,4 +1,4 @@
-package io.github.schneidervictor.resumeapp;
+package io.github.schneidervictor.resumeapp.activities;
 
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import io.github.schneidervictor.resumeapp.R;
 
 /**
  * The Main Activity

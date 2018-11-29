@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">Resume App</string>
+
     <string name="profile_picture_description">Portfolio Profile Picture</string>
     <string name="ring_description">simple growing ring</string>
+
     <string name="home_label">HOME</string>
     <string name="projects_label">PROJECTS</string>
     <string name="work_label">WORK</string>
     <string name="contact_label">CONTACT</string>
+
+    <string name="welcome_header">Welcome!</string>
+    <string name="welcome_message">
+        \tWelcome to my ResumeApp! Take a peak at some of my previous work, and try to keep an eye
+        on the app\'s behaviour. I tried my best to implement as many UI/UX tricks I\'ve learned
+        throughout the months (with moderation of course.)\n\n\tIf you like what you see, you\'ll
+        find all my credentials at the Contact Page!
+    </string>
+
+    <string name="confirm">OK</string>
 </resources>
