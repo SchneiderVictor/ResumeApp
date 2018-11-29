@@ -3,6 +3,7 @@ package io.github.schneidervictor.resumeapp.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -203,5 +204,12 @@ public class ContentActivity extends AppCompatActivity {
 		}
 		
 		fragmentTransaction.commit();
+	}
+	
+	public void visitGithubProfile(View view) {
+		Uri uri = Uri.parse("https://github.com/SchneiderVictor");
+		Intent socialIntent = new Intent(Intent.ACTION_VIEW, uri);
+		
+		startActivity(socialIntent);
 	}
 }
