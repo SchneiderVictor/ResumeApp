@@ -11,25 +11,29 @@
 
     <string name="welcome_header">Welcome!</string>
     <string name="welcome_message">
-        \tWelcome to my ResumeApp! Take a peak at some of my previous work, and try to keep an eye
-        on the app\'s behaviour. I tried my best to implement as many UI/UX tricks I\'ve learned
-        throughout the months (with moderation of course.)\n\n\tIf you like what you see, you\'ll
-        find all my credentials at the Contact Page!
+            \tWelcome to my ResumeApp! Take a peak at some of my previous work, and try to keep an
+        eye on the app\'s behaviour. I tried my best to implement as many UI/UX tricks I\'ve learned
+        throughout the months (with moderation of course.)
+
+            \n\n\tIf you like what you see, you\'ll find all my credentials at the Contact Page!
     </string>
 
     <string name="confirm">OK</string>
 
     <string name="who_am_i_header">Who am I?</string>
     <string name="overview_message">
-        \tI am a student at the University of Toronto who will be graduating this June with a major
-        in Human Biology, a major in Pharmacology &amp; a minor in Computer Science.\n\n\tI started
-        to transition from the Life Sciences to Software Engineering when I was challenged to build
-        a calculator on Minecraft for Xbox. This was an understandably arduous task considering I
-        did not know any binary code, logic gating, or even of the Coding Block that existed on the
-        PC version of the game!\n\n\tTo keep a long story short, I made a very rough first draft
-        that could only calculate 1+2, 1+3 or 2+3. After improving upon my design by building an
-        extendable \"skeleton\" that could sum any distinct positive integer, I decided to take
-        \"Computer Science for the Life Sciences\" (CSC120) &amp; the rest is history!
+            \tI am a student at the University of Toronto who will be graduating this June with a
+        major in Human Biology, a major in Pharmacology &amp; a minor in Computer Science.
+
+            \n\n\tI started to transition from the Life Sciences to Software Engineering when I was
+        challenged to build a calculator on Minecraft for Xbox. This was an understandably arduous
+        task considering I did not know any binary code, logic gating, or even of the Coding Block
+        that existed on the PC version of the game!
+
+            \n\n\tTo keep a long story short, I made a very rough first draft that could only
+        calculate 1+2, 1+3 or 2+3. After improving upon my design by building an extendable
+        \"skeleton\" that could sum any distinct positive integer, I decided to take \"Computer
+        Science for the Life Sciences\" (CSC120) &amp; the rest is history!
     </string>
     <string name="projects_icon_description">projects icon</string>
     <string name="project_overview_header">What have I done?</string>
@@ -38,4 +42,60 @@
         miscellaneous work as well at:
     </string>
     <string name="github_link">https://github.com/SchneiderVictor</string>
+
+    <string name="tab_education">Education</string>
+    <string name="tab_experience">Experience</string>
+    <string name="tab_skills">Skills</string>
+
+    <string name="company_logo_description">company logo</string>
+    <string name="therapy_inov_job_title">Software Development Intern</string>
+    <string name="uoft_job_title">Volunteer Web Developer</string>
+    <string name="b2b_job_title">Bilingual Administration Officer</string>
+
+    <string name="therapy_inov_location">Therapy Innovation Inc. | Toronto, ON</string>
+    <string name="therapy_inov_period">October 2018 – Present</string>
+    <string name="uoft_location">University of Toronto, St. George Campus | Toronto, ON</string>
+    <string name="uoft_period">May 2018 – August 2018</string>
+    <string name="b2b_location">B2B Bank Head Office | Toronto, ON</string>
+    <string name="b2b_period">January 2016 - Present</string>
+
+    <string name="therapy_inov_description">
+        Responsible for developing an ongoing prototype Android application for the start-up.
+
+        \n\nRebuilt the Android application from the ground up, <b>improving the UX &amp; UI</b> by
+        improving the clarity &amp; hierarchy of activities &amp; redefining the theme &amp;
+        structure of activities.
+
+        \n\nTook the initiative to redesign the company website, <b>increasing website responsivity
+        &amp; improving UI</b> by using Bootstrap.
+    </string>
+    <string name="uoft_description">
+        An exploratory project to emulate the Linux bash terminal on a web browser. Progress was to
+        be guided &amp; supervised by two professors, however the work was done independently.
+
+        \n\nStarting from nothing, I managed to quickly browse &amp; eliminate different options,
+        <b>narrowing down to the most appropriate implementation.</b>
+
+        \n\nAs a prototype is required, I have taken the initiative to <b>learn JavaScript &amp;
+        the Node.js Express framework.</b>
+
+        \n\nThis project largely written in JavaScript &amp; C, using emscripten to convert the C
+        code to WebAssembly code.
+    </string>
+    <string name="b2b_description">
+        Responsible for helping complete the bank’s many time-sensitive administrative duties, while
+        <b>assessing the quality</b> of the team’s work &amp; any documents coming in &amp; out of
+        the bank.
+
+        \n\nOn many occasions, I have coordinated my peers &amp; directed them onto different queues
+        <b>to prevent backlog.</b>
+
+        \n\nI have <b>improved productivity</b> by revising team-specific work procedures &amp;
+        training documents &amp; <b>improved client response rates</b> by revising translations on
+        bank correspondence.
+
+        \n\nI have taken the initiative to seek training on various work types <b>to help support a
+        high-turnover work environment.</b>
+    </string>
+    <string name="download_resume">Download my full resume here!</string>
 </resources>

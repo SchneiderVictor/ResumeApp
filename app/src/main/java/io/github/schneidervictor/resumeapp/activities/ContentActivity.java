@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -18,13 +20,15 @@ import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
 
 import io.github.schneidervictor.resumeapp.R;
+import io.github.schneidervictor.resumeapp.adapters.WorkPagerAdapter;
 import io.github.schneidervictor.resumeapp.dialogs.WelcomeDialog;
 import io.github.schneidervictor.resumeapp.fragments.ContactFragment;
 import io.github.schneidervictor.resumeapp.fragments.HomeFragment;
 import io.github.schneidervictor.resumeapp.fragments.ProjectsFragment;
 import io.github.schneidervictor.resumeapp.fragments.WorkFragment;
+import io.github.schneidervictor.resumeapp.listeners.OnTabsReadyListener;
 
-public class ContentActivity extends AppCompatActivity {
+public class ContentActivity extends AppCompatActivity implements OnTabsReadyListener {
 	// center coordinates for circle animation
 	public static final String EXTRA_CIRCULAR_REVEAL_X = "EXTRA_X";
 	public static final String EXTRA_CIRCULAR_REVEAL_Y = "EXTRA_Y";
@@ -82,8 +86,29 @@ public class ContentActivity extends AppCompatActivity {
 		
 		navBar.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 		
+		workFragment.setListener(this);
+		
 		// set the HomeFragment as default
 		setFragment(homeFragment, true);
+	}
+	
+	/**
+	 * Checks if this is the first time the app is being run.
+	 *
+	 * Shows the welcome dialog iff !isFirstRun
+	 */
+	private void checkIsFirstRun() {
+		boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+				.getBoolean("isFirstRun", true);
+		
+		if (isFirstRun) {
+			new WelcomeDialog().show(getSupportFragmentManager(), null);
+			
+			getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+					.edit()
+					.putBoolean("isFirstRun", false)
+					.apply();
+		}
 	}
 	
 	/**
@@ -126,7 +151,7 @@ public class ContentActivity extends AppCompatActivity {
 			
 			@Override
 			public void onAnimationEnd(Animator animator) {
-				new WelcomeDialog().show(getSupportFragmentManager(), null);
+				checkIsFirstRun();
 			}
 			
 			@Override
@@ -179,7 +204,7 @@ public class ContentActivity extends AppCompatActivity {
 	private void setFragment(Fragment fragment, boolean isNavBarFragment) {
 		FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 		
-		//
+		// set fragment animations
 		if (isNavBarFragment) {
 			fragmentTransaction.setCustomAnimations(
 					R.animator.cross_fade_in,
@@ -211,5 +236,25 @@ public class ContentActivity extends AppCompatActivity {
 		Intent socialIntent = new Intent(Intent.ACTION_VIEW, uri);
 		
 		startActivity(socialIntent);
+	}
+	
+	public void downloadResume(View view) {
+		Uri uri = Uri.parse("https://schneidervictor.github.io/res/resume.docx");
+		Intent socialIntent = new Intent(Intent.ACTION_VIEW, uri);
+		
+		startActivity(socialIntent);
+	}
+	
+	/**
+	 * called by the WorkFragment once the ViewPager and TabLayout are ready
+	 */
+	@Override
+	public void onTabsReady(FragmentManager manager) {
+		WorkPagerAdapter adapter = new WorkPagerAdapter(manager, this);
+		ViewPager pager = workFragment.getViewPager();
+		TabLayout tabs = workFragment.getTabLayout();
+		
+		pager.setAdapter(adapter);
+		tabs.setupWithViewPager(pager);
 	}
 }

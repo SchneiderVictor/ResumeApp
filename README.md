@@ -7,9 +7,11 @@ What skills I've brought into this project
 ---
 
 1. Taking advantage of Fragments and their animations to leverage a BottomNavigationBar
+2. Taking advantage of interfaces/listeners to create callbacks, avoiding null-pointers
 
 What I've learned making this project
 ---
 
 1. How to create a pulsing animation
 2. How to use a circular animation to reveal an activity
+3. How to combine a ViewPager with a TabLayout to create more structure
