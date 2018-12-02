@@ -9,9 +9,13 @@ import android.view.ViewGroup;
 
 import io.github.schneidervictor.resumeapp.R;
 
+/**
+ * Fragment for the projects information page
+ */
 public class ProjectsFragment extends Fragment {
 	
-	public ProjectsFragment() {}
+	public ProjectsFragment() {
+	}
 	
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,

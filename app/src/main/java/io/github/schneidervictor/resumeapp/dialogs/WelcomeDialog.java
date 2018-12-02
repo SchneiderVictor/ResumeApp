@@ -11,9 +11,13 @@ import android.view.View;
 
 import io.github.schneidervictor.resumeapp.R;
 
+/**
+ * DialogFragment for the welcome message
+ */
 public class WelcomeDialog extends DialogFragment {
 	
-	public WelcomeDialog() {}
+	public WelcomeDialog() {
+	}
 	
 	@NonNull
 	@Override

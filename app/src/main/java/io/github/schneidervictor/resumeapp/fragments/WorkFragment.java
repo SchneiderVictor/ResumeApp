@@ -12,12 +12,18 @@ import android.view.ViewGroup;
 import io.github.schneidervictor.resumeapp.R;
 import io.github.schneidervictor.resumeapp.listeners.OnTabsReadyListener;
 
+/**
+ * Fragment for the resume page information page
+ *
+ * thif Fragment encompasses the education, experience and skills information pages
+ */
 public class WorkFragment extends Fragment {
 	private TabLayout tabLayout;
 	private ViewPager viewPager;
 	private OnTabsReadyListener listener;
 	
-	public WorkFragment() {}
+	public WorkFragment() {
+	}
 	
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,

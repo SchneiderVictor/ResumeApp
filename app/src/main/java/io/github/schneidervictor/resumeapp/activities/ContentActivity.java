@@ -4,7 +4,10 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
+import android.support.constraint.ConstraintSet;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -12,12 +15,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.transition.TransitionManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
+
+import java.util.InputMismatchException;
 
 import io.github.schneidervictor.resumeapp.R;
 import io.github.schneidervictor.resumeapp.adapters.WorkPagerAdapter;
@@ -28,6 +33,11 @@ import io.github.schneidervictor.resumeapp.fragments.ProjectsFragment;
 import io.github.schneidervictor.resumeapp.fragments.WorkFragment;
 import io.github.schneidervictor.resumeapp.listeners.OnTabsReadyListener;
 
+/**
+ * The Bulk of the application
+ *
+ * The Activity where my entire resume can be explored
+ */
 public class ContentActivity extends AppCompatActivity implements OnTabsReadyListener {
 	// center coordinates for circle animation
 	public static final String EXTRA_CIRCULAR_REVEAL_X = "EXTRA_X";
@@ -42,6 +52,8 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 	private ProjectsFragment projectsFragment = new ProjectsFragment();
 	private WorkFragment workFragment = new WorkFragment();
 	private ContactFragment contactFragment = new ContactFragment();
+	
+	private ConstraintLayout selectedView;
 	
 	// Event listener for the BottomNavigationBar
 	private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -94,7 +106,6 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 	
 	/**
 	 * Checks if this is the first time the app is being run.
-	 *
 	 * Shows the welcome dialog iff !isFirstRun
 	 */
 	private void checkIsFirstRun() {
@@ -168,6 +179,9 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 		circularReveal.start();
 	}
 	
+	/**
+	 * Returns the user to the MainActivity with the appropriate exit animation
+	 */
 	@Override
 	public void onBackPressed() {
 		MainActivity.resumeAnimations();
@@ -181,7 +195,7 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 		float finalRadius = (float) (Math.max(contentContainer.getWidth(), contentContainer.getHeight()) * 1.1);
 		Animator circularReveal = ViewAnimationUtils.createCircularReveal(
 				contentContainer, revealX, revealY, finalRadius, 0);
-
+		
 		circularReveal.setDuration(1000);
 		circularReveal.addListener(new AnimatorListenerAdapter() {
 			@Override
@@ -199,7 +213,7 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 	 *
 	 * @param fragment         the new Fragment object to update the UI with
 	 * @param isNavBarFragment true iff fragment is associated to one of the BottomNavigationBar
-	 *                            options
+	 *                         options
 	 */
 	private void setFragment(Fragment fragment, boolean isNavBarFragment) {
 		FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -231,18 +245,101 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 		fragmentTransaction.commit();
 	}
 	
-	public void visitGithubProfile(View view) {
-		Uri uri = Uri.parse("https://github.com/SchneiderVictor");
-		Intent socialIntent = new Intent(Intent.ACTION_VIEW, uri);
+	/**
+	 * Uses the url stored in the view's tag to launch the appropriate webiste
+	 *
+	 * @param view selected view
+	 */
+	public void visitTaggedSite(View view) {
+		Uri uri = Uri.parse(view.getTag().toString());
+		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 		
-		startActivity(socialIntent);
+		startActivity(intent);
 	}
 	
-	public void downloadResume(View view) {
-		Uri uri = Uri.parse("https://schneidervictor.github.io/res/resume.docx");
-		Intent socialIntent = new Intent(Intent.ACTION_VIEW, uri);
+	/**
+	 * Updates the Fragment's UI to keep the most recently selected View 'opened', and
+	 * display the 'closing' of a View.
+	 *
+	 * @param view the most recently tapped View
+	 */
+	private void updateUI(ConstraintLayout view, int viewOpeningLayout, int selectedClosingLayout) {
+		ConstraintSet openingSet = new ConstraintSet();
+		openingSet.clone(this, viewOpeningLayout);
 		
-		startActivity(socialIntent);
+		// UI update to 'deselect' the previously selected View
+		if (selectedView != null) {
+			
+			// selectedView.setBackgroundResource(R.drawable.rounded_rectangle);
+			ConstraintSet closingSet = new ConstraintSet();
+			closingSet.clone(this, selectedClosingLayout);
+			
+			TransitionManager.beginDelayedTransition(view);
+			closingSet.applyTo(selectedView);
+		}
+		
+		// UI update to 'deselect' the newView
+		if (selectedView == view) {
+			selectedView = null;
+			return;
+		}
+		
+		// UI update to 'select' the newView
+		selectedView = view;
+		// newView.setBackgroundResource(R.drawable.selected_rounded_rectangle);
+		TransitionManager.beginDelayedTransition(view);
+		openingSet.applyTo(view);
+	}
+	
+	/**
+	 * Toggles the selected view to display(open) or hide(the underlying information)
+	 *
+	 * @param view the selected project
+	 */
+	public void toggleProjectView(View view) {
+		updateUI((ConstraintLayout) view, getOpeningLayout(view), getClosingLayout(selectedView));
+	}
+	
+	/**
+	 * A helper method to get the appropriate 'opened' and 'closed' layout resources
+	 *
+	 * @param view the view for which we are querying the layout resourced
+	 * @return int[] with 'open' layout at index 0 and 'closed' layout at index 1
+	 */
+	private int[] getOpeningClosingLayouts(View view) {
+		// reached in the case when selectedView variable is null.
+		// no error is caused by this behaviour.
+		if (view == null) {
+			return new int[2];
+		}
+		
+		switch (view.getId()) {
+			case R.id.project_pcrs_jslinux:
+				return new int[]{R.layout.pcrs_project_open, R.layout.pcrs_project_closed};
+			case R.id.project_dots_lines:
+				return new int[]{R.layout.dotsnlines_project_open, R.layout.dotsnlines_project_closed};
+			case R.id.project_memories:
+				return new int[]{R.layout.memories_project_open, R.layout.memories_project_closed};
+			case R.id.therapy_inov_before_after:
+				return new int[]{R.layout.website_project_open, R.layout.website_project_closed};
+			default:
+				throw new InputMismatchException("View not yet supported");
+		}
+	}
+	
+	/**
+	 * Wrapper method to get a specific layout resource
+	 */
+	private int getOpeningLayout(View view) {
+		return getOpeningClosingLayouts(view)[0];
+	}
+	
+	
+	/**
+	 * Wrapper method to get a specific layout resource
+	 */
+	private int getClosingLayout(View view) {
+		return getOpeningClosingLayouts(view)[1];
 	}
 	
 	/**

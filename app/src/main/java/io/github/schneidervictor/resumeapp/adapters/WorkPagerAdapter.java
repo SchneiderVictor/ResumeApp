@@ -10,6 +10,9 @@ import io.github.schneidervictor.resumeapp.fragments.EducationFragment;
 import io.github.schneidervictor.resumeapp.fragments.ExperienceFragment;
 import io.github.schneidervictor.resumeapp.fragments.SkillsFragment;
 
+/**
+ * FragmentPagerAdapter used for the Resume page
+ */
 public class WorkPagerAdapter extends FragmentPagerAdapter {
 	
 	private Context mainContext;
@@ -19,7 +22,12 @@ public class WorkPagerAdapter extends FragmentPagerAdapter {
 		mainContext = context;
 	}
 	
-	// This determines the fragment for each tab
+	/**
+	 * This determines the fragment for each tab
+	 *
+	 * @param i tab index
+	 * @return Fragment represented by tab i
+	 */
 	@Override
 	public Fragment getItem(int i) {
 		switch (i) {
@@ -39,7 +47,12 @@ public class WorkPagerAdapter extends FragmentPagerAdapter {
 		return 3;
 	}
 	
-	// This determines the title for each tab
+	/**
+	 *  This determines the title for each tab
+	 *
+	 * @param position tab index
+	 * @return String representing the specified tab's title
+	 */
 	@Override
 	public CharSequence getPageTitle(int position) {
 		// Generate title based on item position

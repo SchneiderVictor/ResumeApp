@@ -11,7 +11,7 @@
 
     <string name="welcome_header">Welcome!</string>
     <string name="welcome_message">
-            \tWelcome to my ResumeApp! Take a peak at some of my previous work, and try to keep an
+            \tWelcome to my ResumeApp! Take a peek at some of my previous work, and try to keep an
         eye on the app\'s behaviour. I tried my best to implement as many UI/UX tricks I\'ve learned
         throughout the months (with moderation of course.)
 
@@ -42,6 +42,12 @@
         miscellaneous work as well at:
     </string>
     <string name="github_link">https://github.com/SchneiderVictor</string>
+    <string name="resume_link">https://schneidervictor.github.io/res/resume.docx</string>
+    <string name="pcrs_jslinux_link">https://github.com/schneidervictor/PCRS_JSLINUX</string>
+    <string name="dotsnlines_link">https://github.com/schneidervictor/DotsNLines</string>
+    <string name="memories_link">https://github.com/SchneiderVictor/-memories</string>
+    <string name="therapy_inov_before_link">http://http://therapyinnovationinc.com/index2.html</string>
+    <string name="therapy_inov_after_link">http://http://therapyinnovationinc.com/</string>
 
     <string name="tab_education">Education</string>
     <string name="tab_experience">Experience</string>
@@ -112,4 +118,27 @@
 
         \n\nCurrently learning full web development.
     </string>
+
+    <string name="pcrs_jslinux_label">PCRS_JSLINUX</string>
+    <string name="dotsnlines_label">DotsNLines</string>
+    <string name="memories_label">\@Memories</string>
+    <string name="therapy_inov_before_after_label">Therapy Innovation website</string>
+
+    <string name="dotsnlines_description">
+        As a personal interest, I have taken it upon myself to learn full Android Development,
+        <b>while keeping attention to material design principles.</b>
+
+        \n\nCurrently working on developing a simple game of dots &amp; lines game using purely
+        stock Android.
+    </string>
+
+    <string name="memories_description">
+        As part as a class assignment, 3 teammates &amp; I created a JavaFx application that enabled
+        the user to tag pictures, search through pictures by tags, review a history (&amp; revert to
+        a specific state) which also featured autosaving.
+    </string>
+    <string name="projects_header">Check out my projects</string>
+    <string name="projects_page_intro">
+        Tap the buttons below to see github links (tappable),
+        decriptions and demos of my protects!</string>
 </resources>

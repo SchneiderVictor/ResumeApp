@@ -3,10 +3,10 @@ package io.github.schneidervictor.resumeapp.activities;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -14,13 +14,17 @@ import io.github.schneidervictor.resumeapp.R;
 
 /**
  * The Main Activity
- *
- * A simple black screen with a pulsing profile picture.
+ * A simple screen with a pulsing profile picture.
  */
 public class MainActivity extends AppCompatActivity {
-	private final int PULSE_DURATION = 1000;
 	private static ObjectAnimator pulseAnimator;
 	private static ObjectAnimator growthAnimator;
+	private final int PULSE_DURATION = 1000;
+	
+	public static void resumeAnimations() {
+		pulseAnimator.start();
+		growthAnimator.start();
+	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +38,11 @@ public class MainActivity extends AppCompatActivity {
 		startGrowingAnimation(ring, 1.5f);
 	}
 	
-	public static void resumeAnimations() {
-		pulseAnimator.start();
-		growthAnimator.start();
-	}
-	
 	/**
 	 * starts the pulsing animation of the given ImageView (the profile picture)
 	 *
 	 * @param imageView the image that must pulse
-	 * @param newScale the new scale of the image at the end of its animation
+	 * @param newScale  the new scale of the image at the end of its animation
 	 */
 	private void startPulsingAnimation(ImageView imageView, float newScale) {
 		ObjectAnimator animation = ObjectAnimator.ofPropertyValuesHolder(
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 	 * starts the the growing/fading animation of the given ImageView (the white ring)
 	 *
 	 * @param imageView the image that must grow and fade
-	 * @param newScale the new scale of the image at the end of its animation
+	 * @param newScale  the new scale of the image at the end of its animation
 	 */
 	private void startGrowingAnimation(ImageView imageView, float newScale) {
 		ObjectAnimator animation = ObjectAnimator.ofPropertyValuesHolder(
@@ -85,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 	 * Finds the coordinates of the center of the given view and sets them to the intent
 	 *
 	 * @param intent the intent that will start the ContentActivity
-	 * @param view the view from which the animation will "originate from"
+	 * @param view   the view from which the animation will "originate from"
 	 */
 	private void setAnimationCenter(Intent intent, View view) {
 		int revealX = (int) (view.getX() + view.getWidth() / 2);

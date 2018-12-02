@@ -10,9 +10,13 @@ import android.view.ViewGroup;
 
 import io.github.schneidervictor.resumeapp.R;
 
+/**
+ * Fragment for the skills information page
+ */
 public class SkillsFragment extends Fragment {
 	
-	public SkillsFragment() {}
+	public SkillsFragment() {
+	}
 	
 	@Nullable
 	@Override

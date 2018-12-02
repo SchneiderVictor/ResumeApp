@@ -9,9 +9,13 @@ import android.view.ViewGroup;
 
 import io.github.schneidervictor.resumeapp.R;
 
+/**
+ * Fragment for the contact information page
+ */
 public class ContactFragment extends Fragment {
 	
-	public ContactFragment() {}
+	public ContactFragment() {
+	}
 	
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,

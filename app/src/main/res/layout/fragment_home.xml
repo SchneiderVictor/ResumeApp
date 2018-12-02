@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".activities.ContentActivity">
 
     <android.support.constraint.ConstraintLayout
@@ -18,21 +18,21 @@
             android:contentDescription="@string/profile_picture_description"
             android:src="@drawable/profile_pic"
 
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:text="@string/who_am_i_header"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold"
             android:textSize="24sp"
-            android:layout_marginStart="20dp"
+            android:textStyle="bold"
 
-            app:layout_constraintTop_toTopOf="@id/profile_pic"
             app:layout_constraintBottom_toBottomOf="@id/profile_pic"
-            app:layout_constraintLeft_toRightOf="@id/profile_pic"/>
+            app:layout_constraintLeft_toRightOf="@id/profile_pic"
+            app:layout_constraintTop_toTopOf="@id/profile_pic" />
 
         <TextView
             android:id="@+id/overview_message"
@@ -41,21 +41,21 @@
             android:layout_marginTop="20dp"
             android:text="@string/overview_message"
 
-            app:layout_constraintTop_toBottomOf="@id/profile_pic"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_pic" />
 
         <TextView
             android:id="@+id/project_overview_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="@string/project_overview_header"
             android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold"
             android:textSize="24sp"
-            android:layout_marginTop="20dp"
+            android:textStyle="bold"
 
-            app:layout_constraintTop_toBottomOf="@id/overview_message"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/overview_message" />
 
         <TextView
             android:id="@+id/projects_intro"
@@ -64,18 +64,19 @@
             android:layout_marginTop="20dp"
             android:text="@string/project_overview_intro"
 
-            app:layout_constraintTop_toBottomOf="@id/project_overview_header"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/project_overview_header" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="visitTaggedSite"
+            android:tag="@string/github_link"
+
             android:text="@string/github_link"
             android:textColor="@color/colorAccent"
-
-            app:layout_constraintTop_toBottomOf="@id/projects_intro"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:onClick="visitGithubProfile"/>
+            app:layout_constraintTop_toBottomOf="@id/projects_intro" />
 
     </android.support.constraint.ConstraintLayout>
 

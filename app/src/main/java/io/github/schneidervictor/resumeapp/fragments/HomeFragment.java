@@ -9,9 +9,13 @@ import android.view.ViewGroup;
 
 import io.github.schneidervictor.resumeapp.R;
 
+/**
+ * Fragment for the home page
+ */
 public class HomeFragment extends Fragment {
 	
-	public HomeFragment() {}
+	public HomeFragment() {
+	}
 	
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,

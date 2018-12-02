@@ -10,9 +10,13 @@ import android.view.ViewGroup;
 
 import io.github.schneidervictor.resumeapp.R;
 
+/**
+ * Fragment for the education information page
+ */
 public class EducationFragment extends Fragment {
 	
-	public EducationFragment() {}
+	public EducationFragment() {
+	}
 	
 	@Nullable
 	@Override

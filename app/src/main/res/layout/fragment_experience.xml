@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,13 +15,14 @@
             android:id="@+id/download_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="visitTaggedSite"
+            android:tag="@string/resume_link"
             android:text="@string/download_resume"
             android:textColor="@color/colorAccent"
-            android:onClick="downloadResume"
 
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/job_1"
@@ -81,8 +81,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/therapy_inov_description"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -148,17 +148,29 @@
                 app:layout_constraintTop_toBottomOf="@id/job_location_2" />
 
             <TextView
+                android:id="@+id/pcrs_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="visitTaggedSite"
+                android:tag="@string/pcrs_jslinux_link"
+
+                android:text="@string/pcrs_jslinux_link"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/job_period_2" />
+
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/uoft_description"
                 android:textColor="@color/black"
                 android:textSize="15sp"
 
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/job_period_2" />
+                app:layout_constraintTop_toBottomOf="@id/pcrs_link" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -219,8 +231,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/b2b_description"
                 android:textColor="@color/black"
                 android:textSize="15sp"

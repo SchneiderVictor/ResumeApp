@@ -10,9 +10,13 @@ import android.view.ViewGroup;
 
 import io.github.schneidervictor.resumeapp.R;
 
+/**
+ * Fragment for the experience information page
+ */
 public class ExperienceFragment extends Fragment {
 	
-	public ExperienceFragment() {}
+	public ExperienceFragment() {
+	}
 	
 	@Nullable
 	@Override

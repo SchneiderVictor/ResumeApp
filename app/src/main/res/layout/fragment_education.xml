@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,21 +11,22 @@
         android:id="@+id/download_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="visitTaggedSite"
+        android:tag="@string/resume_link"
         android:text="@string/download_resume"
         android:textColor="@color/colorAccent"
-        android:onClick="downloadResume"
 
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/uoft_logo"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/uoft_logo_description"
         android:src="@drawable/uoft_logo"
-        android:layout_marginTop="20dp"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/download_link" />
@@ -35,16 +35,16 @@
         android:id="@+id/uni_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="@string/uoft_campus"
         android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
         android:textSize="24sp"
-        android:layout_marginStart="20dp"
+        android:textStyle="bold"
 
-        app:layout_constraintTop_toTopOf="@id/uoft_logo"
         app:layout_constraintBottom_toBottomOf="@id/uoft_logo"
         app:layout_constraintLeft_toRightOf="@id/uoft_logo"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/uoft_logo" />
 
     <TextView
         android:id="@+id/program_label"
@@ -70,13 +70,13 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:text="@string/uoft_edu_details"
         android:textColor="@color/black"
 
-        app:layout_constraintTop_toBottomOf="@id/graduation_date_label"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/graduation_date_label" />
 
 </android.support.constraint.ConstraintLayout>
