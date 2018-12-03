@@ -18,7 +18,7 @@
             android:onClick="visitTaggedSite"
             android:tag="@string/resume_link"
             android:text="@string/download_resume"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/link_color"
 
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -36,8 +36,8 @@
 
             <ImageView
                 android:id="@+id/company_logo_1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/default_image_size"
+                android:layout_height="@dimen/default_image_size"
                 android:contentDescription="@string/company_logo_description"
                 android:src="@drawable/therapy_inov_logo"
 
@@ -79,6 +79,48 @@
                 app:layout_constraintTop_toBottomOf="@id/job_location_1" />
 
             <TextView
+                android:id="@+id/website_link_anchor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See "
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/job_period_1" />
+
+            <TextView
+                android:id="@+id/website_link_before"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="visitTaggedSite"
+                android:tag="@string/therapy_inov_before_link"
+                android:text="before "
+                android:textColor="@color/link_color"
+
+                app:layout_constraintLeft_toRightOf="@id/website_link_anchor"
+                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
+
+            <TextView
+                android:id="@+id/website_link_anchor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="and "
+
+                app:layout_constraintLeft_toRightOf="@id/website_link_before"
+                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
+
+            <TextView
+                android:id="@+id/website_link_after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="visitTaggedSite"
+                android:tag="@string/therapy_inov_after_link"
+                android:text="after."
+                android:textColor="@color/link_color"
+
+                app:layout_constraintLeft_toRightOf="@id/website_link_anchor2"
+                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
+
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -89,7 +131,7 @@
 
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/job_period_1" />
+                app:layout_constraintTop_toBottomOf="@id/website_link_anchor" />
 
         </android.support.constraint.ConstraintLayout>
 
@@ -105,8 +147,8 @@
 
             <ImageView
                 android:id="@+id/company_logo_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/default_image_size"
+                android:layout_height="@dimen/default_image_size"
                 android:contentDescription="@string/company_logo_description"
                 android:src="@drawable/uoft_logo"
 
@@ -155,7 +197,7 @@
                 android:tag="@string/pcrs_jslinux_link"
 
                 android:text="@string/pcrs_jslinux_link"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/link_color"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/job_period_2" />
 
@@ -186,8 +228,8 @@
 
             <ImageView
                 android:id="@+id/company_logo_3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/default_image_size"
+                android:layout_height="@dimen/default_image_size"
                 android:contentDescription="@string/company_logo_description"
                 android:src="@drawable/b2b_logo"
 

@@ -4,14 +4,13 @@
     <string name="profile_picture_description">Portfolio Profile Picture</string>
     <string name="ring_description">simple growing ring</string>
 
-    <string name="home_label">HOME</string>
+    <string name="home_label">INTRO</string>
     <string name="projects_label">PROJECTS</string>
     <string name="work_label">RESUME</string>
     <string name="contact_label">CONTACT</string>
 
     <string name="welcome_header">Welcome!</string>
-    <string name="welcome_message">
-            \tWelcome to my ResumeApp! Take a peek at some of my previous work, and try to keep an
+    <string name="welcome_message">\tWelcome to my ResumeApp! Take a peek at some of my previous work, and try to keep an
         eye on the app\'s behaviour. I tried my best to implement as many UI/UX tricks I\'ve learned
         throughout the months (with moderation of course.)
 
@@ -21,8 +20,7 @@
     <string name="confirm">OK</string>
 
     <string name="who_am_i_header">Who am I?</string>
-    <string name="overview_message">
-            \tI am a student at the University of Toronto who will be graduating this June with a
+    <string name="overview_message">\tI am a student at the University of Toronto who will be graduating this June with a
         major in Human Biology, a major in Pharmacology &amp; a minor in Computer Science.
 
             \n\n\tI started to transition from the Life Sciences to Software Engineering when I was
@@ -37,17 +35,21 @@
     </string>
     <string name="projects_icon_description">projects icon</string>
     <string name="project_overview_header">What have I done?</string>
-    <string name="project_overview_intro">
-        See below for a brief overview of my published work. Feel free to take a glance at my other
+    <string name="project_overview_intro">\tSee below for a brief overview of my published work. Feel free to take a glance at my other
         miscellaneous work as well at:
     </string>
+    <string name="project_overview_intro2">\n\tYou will also be able to explore my various projects and work experience throughout
+        this app. All relevant links will be included and tappable, so if you\'re interested in
+        anything in particular, feel free to follow the link!
+    </string>
+
     <string name="github_link">https://github.com/SchneiderVictor</string>
     <string name="resume_link">https://schneidervictor.github.io/res/resume.docx</string>
     <string name="pcrs_jslinux_link">https://github.com/schneidervictor/PCRS_JSLINUX</string>
     <string name="dotsnlines_link">https://github.com/schneidervictor/DotsNLines</string>
     <string name="memories_link">https://github.com/SchneiderVictor/-memories</string>
-    <string name="therapy_inov_before_link">http://http://therapyinnovationinc.com/index2.html</string>
-    <string name="therapy_inov_after_link">http://http://therapyinnovationinc.com/</string>
+    <string name="therapy_inov_before_link">http://therapyinnovationinc.com/index2.html</string>
+    <string name="therapy_inov_after_link">http://therapyinnovationinc.com/</string>
 
     <string name="tab_education">Education</string>
     <string name="tab_experience">Experience</string>
@@ -65,8 +67,7 @@
     <string name="b2b_location">B2B Bank Head Office | Toronto, ON</string>
     <string name="b2b_period">January 2016 - Present</string>
 
-    <string name="therapy_inov_description">
-        Responsible for developing an ongoing prototype Android application for the start-up.
+    <string name="therapy_inov_description">Responsible for developing an ongoing prototype Android application for the start-up.
 
         \n\nRebuilt the Android application from the ground up, <b>improving the UX &amp; UI</b> by
         improving the clarity &amp; hierarchy of activities &amp; redefining the theme &amp;
@@ -75,8 +76,11 @@
         \n\nTook the initiative to redesign the company website, <b>increasing website responsivity
         &amp; improving UI</b> by using Bootstrap.
     </string>
-    <string name="uoft_description">
-        An exploratory project to emulate the Linux bash terminal on a web browser. Progress was to
+    <string name="therapy_inov_description_short">
+        I have taken the initiative to redesign the company website, <b>increasing website responsivity
+        &amp; improving UI</b> by using Bootstrap.
+    </string>
+    <string name="uoft_description">An exploratory project to emulate the Linux bash terminal on a web browser. Progress was to
         be guided &amp; supervised by two professors, however the work was done independently.
 
         \n\nStarting from nothing, I managed to quickly browse &amp; eliminate different options,
@@ -88,8 +92,7 @@
         \n\nThis project largely written in JavaScript &amp; C, using emscripten to convert the C
         code to WebAssembly code.
     </string>
-    <string name="b2b_description">
-        Responsible for helping complete the bank’s many time-sensitive administrative duties, while
+    <string name="b2b_description">Responsible for helping complete the bank’s many time-sensitive administrative duties, while
         <b>assessing the quality</b> of the team’s work &amp; any documents coming in &amp; out of
         the bank.
 
@@ -108,13 +111,12 @@
     <string name="uoft_campus">University of Toronto, St. George Campus</string>
     <string name="program_label">Honours Bachelor of Science in Life Sciences</string>
     <string name="graduation_date">Graduating in: June 2019</string>
-    <string name="uoft_edu_details">
-        <b>GPA: </b>3.11 / 4.0
+    <string name="uoft_edu_details"><b>GPA:</b> 3.11 / 4.0
 
-        \n\n<b>Programs :</b>
-            \n\tMajor in Human Biology
-            \n\tMajor in Pharmacology
-            \n\tMinor in Computer Science
+        \n\n<b>Programs:</b>
+            \n\t\tMajor in Human Biology
+            \n\t\tMajor in Pharmacology
+            \n\t\tMinor in Computer Science
 
         \n\nCurrently learning full web development.
     </string>
@@ -124,21 +126,33 @@
     <string name="memories_label">\@Memories</string>
     <string name="therapy_inov_before_after_label">Therapy Innovation website</string>
 
-    <string name="dotsnlines_description">
-        As a personal interest, I have taken it upon myself to learn full Android Development,
+    <string name="dotsnlines_description">As a personal interest, I have taken it upon myself to learn full Android Development,
         <b>while keeping attention to material design principles.</b>
 
         \n\nCurrently working on developing a simple game of dots &amp; lines game using purely
         stock Android.
     </string>
 
-    <string name="memories_description">
-        As part as a class assignment, 3 teammates &amp; I created a JavaFx application that enabled
+    <string name="memories_description">As part as a class assignment, 3 teammates &amp; I created a JavaFx application that enabled
         the user to tag pictures, search through pictures by tags, review a history (&amp; revert to
         a specific state) which also featured autosaving.
     </string>
     <string name="projects_header">Check out my projects</string>
-    <string name="projects_page_intro">
-        Tap the buttons below to see github links (tappable),
-        decriptions and demos of my protects!</string>
+    <string name="projects_page_intro">Tap the buttons below to see github links and descriptions of my projects.
+
+        \n\nDemos and screenshots coming soon!
+    </string>
+    <string name="skill_logo_desc">skill logo</string>
+    <string name="java_skill_label">JAVA</string>
+    <string name="c_skill_label">C</string>
+    <string name="android_skill_label">ANDROID</string>
+    <string name="python_skill_label">PYTHON</string>
+    <string name="git_skill_label">GIT</string>
+    <string name="html_xml_skill_label">HTML/XML</string>
+    <string name="css_skill_label">CSS</string>
+    <string name="bootstrap_skill_label">BOOTSTRAP</string>
+    <string name="node_skill_label">NODE.JS</string>
+    <string name="express_skill_label">EXPRESS.JS</string>
+    <string name="linux_skill_label">LINUX ENVIRONMENTS</string>
+    <string name="r_skill_label">R</string>
 </resources>

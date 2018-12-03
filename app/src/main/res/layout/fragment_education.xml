@@ -14,7 +14,7 @@
         android:onClick="visitTaggedSite"
         android:tag="@string/resume_link"
         android:text="@string/download_resume"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/link_color"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/uoft_logo"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/uoft_logo_description"
         android:src="@drawable/uoft_logo"

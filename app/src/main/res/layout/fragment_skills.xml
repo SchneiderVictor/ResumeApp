@@ -1,18 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SKILLS"
+        android:padding="20dp">
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/skill_1_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/java_skill_logo"
 
-</android.support.constraint.ConstraintLayout>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/java_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_1_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_1_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_1_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_2_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/c_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_1_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/c_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_2_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_2_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_2_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_3_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/android_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_2_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/android_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_3_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_3_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_3_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_4_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/python_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_3_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/python_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_4_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_4_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_4_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_5_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/git_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_4_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/git_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_5_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_5_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_5_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_6_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/html_xml_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_5_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/html_xml_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_6_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_6_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_6_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_7_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/css_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_6_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/css_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_7_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_7_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_7_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_8_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/bootstrap_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_7_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/bootstrap_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_8_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_8_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_8_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_9_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/node_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_8_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/node_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_9_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_9_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_9_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_10_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/node_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_9_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/express_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_10_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_10_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_10_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_11_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/linux_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_10_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/linux_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_11_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_11_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_11_logo"/>
+
+        <ImageView
+            android:id="@+id/skill_12_logo"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/skill_logo_desc"
+            android:src="@drawable/r_skill_logo"
+
+            app:layout_constraintTop_toBottomOf="@id/skill_11_logo"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/r_skill_label"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            app:layout_constraintTop_toTopOf="@id/skill_12_logo"
+            app:layout_constraintBottom_toBottomOf="@id/skill_12_logo"
+            app:layout_constraintLeft_toRightOf="@id/skill_12_logo"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
