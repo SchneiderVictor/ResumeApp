@@ -11,28 +11,14 @@
         android:layout_height="wrap_content"
         android:padding="20dp">
 
-        <TextView
-            android:id="@+id/download_link"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="visitTaggedSite"
-            android:tag="@string/resume_link"
-            android:text="@string/download_resume"
-            android:textColor="@color/link_color"
-
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <android.support.constraint.ConstraintLayout
             android:id="@+id/job_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
 
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/download_link">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/company_logo_1"

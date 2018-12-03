@@ -7,29 +7,15 @@
     android:padding="20dp"
     tools:context=".activities.ContentActivity">
 
-    <TextView
-        android:id="@+id/download_link"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="visitTaggedSite"
-        android:tag="@string/resume_link"
-        android:text="@string/download_resume"
-        android:textColor="@color/link_color"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/uoft_logo"
         android:layout_width="@dimen/default_image_size"
         android:layout_height="@dimen/default_image_size"
-        android:layout_marginTop="20dp"
         android:contentDescription="@string/uoft_logo_description"
         android:src="@drawable/uoft_logo"
 
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/download_link" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/uni_header"
