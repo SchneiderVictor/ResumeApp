@@ -155,4 +155,18 @@
     <string name="express_skill_label">EXPRESS.JS</string>
     <string name="linux_skill_label">LINUX ENVIRONMENTS</string>
     <string name="r_skill_label">R</string>
+
+    <string name="phone_logo_description">Phone contact logo</string>
+    <string name="email_logo_description">Email contact logo</string>
+    <string name="instagram_logo_description">Instagram logo</string>
+    <string name="twitter_logo_description">Twitter logo</string>
+    <string name="facebook_logo_description">Facebook logo</string>
+    <string name="linkedin_logo_description">LinkedIn logo</string>
+    <string name="github_logo_description">Github logo</string>
+    <string name="contact_details_header">Contact details</string>
+
+    <string name="contact_intro">Tap the following logos to follow them to my respective profile.
+        \n\nPlease note that if you have the respective app installed, it will be launched. Otherwise,
+        you will be your internet browser will be launched. (This does not apply to the phone and email
+        links of course!)</string>
 </resources>
