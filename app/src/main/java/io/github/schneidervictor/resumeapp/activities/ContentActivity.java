@@ -3,6 +3,8 @@ package io.github.schneidervictor.resumeapp.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -23,9 +25,11 @@ import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
 
 import java.util.InputMismatchException;
+import java.util.List;
 
 import io.github.schneidervictor.resumeapp.R;
 import io.github.schneidervictor.resumeapp.adapters.WorkPagerAdapter;
+import io.github.schneidervictor.resumeapp.containers.ContactInfoContainer;
 import io.github.schneidervictor.resumeapp.dialogs.WelcomeDialog;
 import io.github.schneidervictor.resumeapp.fragments.ContactFragment;
 import io.github.schneidervictor.resumeapp.fragments.HomeFragment;
@@ -35,7 +39,7 @@ import io.github.schneidervictor.resumeapp.listeners.OnTabsReadyListener;
 
 /**
  * The Bulk of the application
- *
+ * <p>
  * The Activity where my entire resume can be explored
  */
 public class ContentActivity extends AppCompatActivity implements OnTabsReadyListener {
@@ -353,5 +357,89 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 		
 		pager.setAdapter(adapter);
 		tabs.setupWithViewPager(pager);
+	}
+	
+	/**
+	 * Checks if the user has the associated app installed
+	 *
+	 * @param intent intent that would launch an associated app
+	 * @return true iff the associated app is installed
+	 */
+	private boolean isIntentAvailable(Intent intent) {
+		final PackageManager packageManager = getApplicationContext().getPackageManager();
+		List<ResolveInfo> list = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+		return list.size() > 0;
+	}
+	
+	/**
+	 * Launches the default browser, directed to the input link
+	 *
+	 * @param link social media website link
+	 */
+	private void launchSocialLink(String link) {
+		Uri uri = Uri.parse(link);
+		Intent socialIntent = new Intent(Intent.ACTION_VIEW, uri);
+		
+		startActivity(socialIntent);
+	}
+	
+	/**
+	 * Launched an the associated application, indicated by pack, if installed.
+	 * Otherwise, launches the browser to the backupLink
+	 *
+	 * @param mainLink   app-specific link
+	 * @param backupLink website link
+	 * @param pack       android application package
+	 */
+	private void launchSocialLink(String mainLink, String backupLink, String pack) {
+		Uri uri = Uri.parse(mainLink);
+		Intent socialIntent = new Intent(Intent.ACTION_VIEW, uri);
+		socialIntent.setPackage(pack);
+		
+		if (isIntentAvailable(socialIntent)) {
+			startActivity(socialIntent);
+		} else {
+			launchSocialLink(backupLink);
+		}
+	}
+	
+	public void launchGithub(View view) {
+		launchSocialLink("https://github.com/" + ContactInfoContainer.GITHUB_USERNAME);
+	}
+	
+	public void launchLinkedIn(View view) {
+		launchSocialLink("https://www.linkedin.com/in/" + ContactInfoContainer.LINKEDIN_USERNAME + "/");
+	}
+	
+	public void launchPhone(View view) {
+		Intent emailIntent = new Intent(Intent.ACTION_DIAL);
+		emailIntent.setData(Uri.parse("tel:" + ContactInfoContainer.PHONE_NUMBER));
+		
+		startActivity(emailIntent);
+	}
+	
+	public void launchEmail(View view) {
+		Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+		emailIntent.setData(Uri.parse("mailto:" + ContactInfoContainer.EMAIL_ADDRESS));
+		
+		startActivity(emailIntent);
+	}
+	
+	public void launchIG(View view) {
+		launchSocialLink("http://instagram.com/_u/" + ContactInfoContainer.INSTAGRAM_USERNAME,
+				"http://instagram.com/" + ContactInfoContainer.INSTAGRAM_USERNAME,
+				"com.instagram.android");
+	}
+	
+	public void launchTwitter(View view) {
+		launchSocialLink("twitter://user?screen_name=" + ContactInfoContainer.TWITTER_USERNAME,
+				"https://twitter.com/" + ContactInfoContainer.TWITTER_USERNAME,
+				"com.twitter.android");
+	}
+	
+	public void launchFacebook(View view) {
+		launchSocialLink("fb://facewebmodal/f?href=" + ContactInfoContainer.FACEBOOK_LINK,
+				ContactInfoContainer.FACEBOOK_LINK,
+				"com.facebook.katana");
 	}
 }

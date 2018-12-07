@@ -48,7 +48,7 @@ public class WorkPagerAdapter extends FragmentPagerAdapter {
 	}
 	
 	/**
-	 *  This determines the title for each tab
+	 * This determines the title for each tab
 	 *
 	 * @param position tab index
 	 * @return String representing the specified tab's title

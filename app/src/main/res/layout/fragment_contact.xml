@@ -11,15 +11,13 @@
         android:id="@+id/contact_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:text="@string/contact_details_header"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         android:textStyle="bold"
 
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <TextView
         android:id="@+id/contact_intro_message"
@@ -37,8 +35,7 @@
         android:layout_height="32dp"
         android:contentDescription="@string/github_logo_description"
         android:src="@drawable/github_logo"
-        android:tag="https://github.com/schneidervictor"
-        android:onClick="visitTaggedSite"
+        android:onClick="launchGithub"
 
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@id/contact_intro_message"
@@ -52,6 +49,7 @@
         android:layout_height="32dp"
         android:contentDescription="@string/linkedin_logo_description"
         android:src="@drawable/linkedin_logo"
+        android:onClick="launchLinkedIn"
 
         app:layout_constraintTop_toTopOf="@id/github_logo"
         app:layout_constraintBottom_toBottomOf="@id/github_logo"
@@ -64,6 +62,7 @@
         android:layout_height="32dp"
         android:contentDescription="@string/phone_logo_description"
         android:src="@drawable/phone_logo"
+        android:onClick="launchPhone"
 
         app:layout_constraintTop_toTopOf="@id/github_logo"
         app:layout_constraintBottom_toBottomOf="@id/github_logo"
@@ -76,6 +75,7 @@
         android:layout_height="32dp"
         android:contentDescription="@string/email_logo_description"
         android:src="@drawable/email_logo"
+        android:onClick="launchEmail"
 
         app:layout_constraintTop_toTopOf="@id/github_logo"
         app:layout_constraintBottom_toBottomOf="@id/github_logo"
@@ -89,6 +89,7 @@
         android:contentDescription="@string/instagram_logo_description"
         android:src="@drawable/ig_logo"
         android:layout_marginTop="20dp"
+        android:onClick="launchIG"
 
         app:layout_constraintTop_toBottomOf="@id/github_logo"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,6 +102,7 @@
         android:layout_height="32dp"
         android:contentDescription="@string/twitter_logo_description"
         android:src="@drawable/twitter_logo"
+        android:onClick="launchTwitter"
 
         app:layout_constraintTop_toTopOf="@id/ig_logo"
         app:layout_constraintBottom_toBottomOf="@id/ig_logo"
@@ -113,6 +115,7 @@
         android:layout_height="32dp"
         android:contentDescription="@string/facebook_logo_description"
         android:src="@drawable/fb_logo"
+        android:onClick="launchFacebook"
 
         app:layout_constraintTop_toTopOf="@id/ig_logo"
         app:layout_constraintBottom_toBottomOf="@id/ig_logo"

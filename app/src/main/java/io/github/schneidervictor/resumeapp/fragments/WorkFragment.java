@@ -14,7 +14,7 @@ import io.github.schneidervictor.resumeapp.listeners.OnTabsReadyListener;
 
 /**
  * Fragment for the resume page information page
- *
+ * <p>
  * thif Fragment encompasses the education, experience and skills information pages
  */
 public class WorkFragment extends Fragment {
