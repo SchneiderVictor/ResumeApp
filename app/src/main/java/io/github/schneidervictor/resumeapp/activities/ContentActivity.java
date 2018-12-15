@@ -233,8 +233,8 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 			fragmentTransaction.setCustomAnimations(
 					R.animator.float_in,
 					R.animator.float_out,
-					R.animator.float_out,
-					R.animator.float_in);
+					R.animator.fall_in,
+					R.animator.fall_out);
 		}
 		
 		fragmentTransaction.replace(R.id.content_frame, fragment);
