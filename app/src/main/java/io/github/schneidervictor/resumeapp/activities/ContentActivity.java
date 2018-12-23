@@ -320,6 +320,8 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 		switch (view.getId()) {
 			case R.id.project_pcrs_jslinux:
 				return new int[]{R.layout.pcrs_project_open, R.layout.pcrs_project_closed};
+			case R.id.project_time_capsule:
+				return new int[] {R.layout.capsule_project_open, R.layout.capsule_project_closed};
 			case R.id.project_dots_lines:
 				return new int[]{R.layout.dotsnlines_project_open, R.layout.dotsnlines_project_closed};
 			case R.id.project_memories:

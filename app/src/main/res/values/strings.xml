@@ -10,7 +10,7 @@
     <string name="contact_label">CONTACT</string>
 
     <string name="welcome_header">Welcome!</string>
-    <string name="welcome_message">\tWelcome to my ResumeApp! Take a peek at some of my previous work, and try to keep an
+    <string name="welcome_message">\tWelcome to my Resume App! Take a peek at some of my previous work, &amp; try to keep an
         eye on the app\'s behaviour. I tried my best to implement as many UI/UX tricks I\'ve learned
         throughout the months (with moderation of course.)
 
@@ -38,8 +38,8 @@
     <string name="project_overview_intro">\tSee below for a brief overview of my published work. Feel free to take a glance at my other
         miscellaneous work as well at:
     </string>
-    <string name="project_overview_intro2">\n\tYou will also be able to explore my various projects and work experience throughout
-        this app. All relevant links will be included and tappable, so if you\'re interested in
+    <string name="project_overview_intro2">\n\tYou will also be able to explore my various projects &amp; work experience throughout
+        this app. All relevant links will be included &amp; tappable, so if you\'re interested in
         anything in particular, feel free to follow the link!
     </string>
 
@@ -50,6 +50,7 @@
     <string name="memories_link">https://github.com/SchneiderVictor/-memories</string>
     <string name="therapy_inov_before_link">http://therapyinnovationinc.com/index2.html</string>
     <string name="therapy_inov_after_link">http://therapyinnovationinc.com/</string>
+    <string name="time_capsules_link">https://csc309-team19.herokuapp.com/</string>
 
     <string name="tab_education">Education</string>
     <string name="tab_experience">Experience</string>
@@ -106,6 +107,20 @@
         \n\nI have taken the initiative to seek training on various work types <b>to help support a
         high-turnover work environment.</b>
     </string>
+    <string name="time_capsules_description">A website created as a team of 4 for a Web Development
+        project.
+
+        \n\nA time capsule website, built from the ground up, using Bootstrap &amp; Javascript to
+        facilitate the front-end &amp; Node.js, Express, Mongoose &amp; Heroku to facilitate the
+        back-end.
+
+        \n\nThis website serves as a virtual time capsule, where users can contribute or comment to
+        "public event" capsules that are created by administrators (See two example public capsules).
+
+        \n\nRegistered users additionally have private capsules to which they can invite other
+        registered users.
+    </string>
+
     <string name="download_resume">Download my full resume here!</string>
     <string name="uoft_logo_description">uoft logo</string>
     <string name="uoft_campus">University of Toronto, St. George Campus</string>
@@ -138,9 +153,9 @@
         a specific state) which also featured autosaving.
     </string>
     <string name="projects_header">Check out my projects</string>
-    <string name="projects_page_intro">Tap the buttons below to see github links and descriptions of my projects.
+    <string name="projects_page_intro">Tap the buttons below to see github links &amp; descriptions of my projects.
 
-        \n\nDemos and screenshots coming soon!
+        \n\nDemos &amp; screenshots coming soon!
     </string>
     <string name="skill_logo_desc">skill logo</string>
     <string name="java_skill_label">JAVA</string>
@@ -167,6 +182,11 @@
 
     <string name="contact_intro">Tap the following logos to follow them to my respective profile.
         \n\nPlease note that if you have the respective app installed, it will be launched. Otherwise,
-        you will be your internet browser will be launched. (This does not apply to the phone and email
+        you will be your internet browser will be launched. (This does not apply to the phone &amp; email
         links of course!)</string>
+    <string name="see_anchor">See\ </string>
+    <string name="before_anchor">before\ </string>
+    <string name="and_anchor">&amp;\ </string>
+    <string name="after_anchor">after.</string>
+    <string name="time_capsule_label">Time Capsules website</string>
 </resources>

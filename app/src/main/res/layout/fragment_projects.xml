@@ -32,73 +32,16 @@
             app:layout_constraintTop_toBottomOf="@id/page_header" />
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/project_pcrs_jslinux"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/rounded_rectangle"
-
-            android:onClick="toggleProjectView"
-            app:layout_constraintBottom_toTopOf="@id/project_dots_lines"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/projects_page_desc">
-
-            <TextView
-                android:id="@+id/pcrs_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pcrs_jslinux_label"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp"
-                android:textStyle="bold"
-
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/pcrs_link"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:onClick="visitTaggedSite"
-                android:tag="@string/pcrs_jslinux_link"
-                android:text="@string/pcrs_jslinux_link"
-                android:textColor="@color/link_color"
-
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/pcrs_description"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/uoft_description"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
             android:id="@+id/project_dots_lines"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_rectangle"
-
             android:onClick="toggleProjectView"
-            app:layout_constraintBottom_toTopOf="@id/project_memories"
+
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/project_pcrs_jslinux">
+            app:layout_constraintTop_toBottomOf="@id/projects_page_desc">
 
             <TextView
                 android:id="@+id/dotsnlines_label"
@@ -142,17 +85,205 @@
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/project_time_capsule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_rectangle"
+            android:onClick="toggleProjectView"
+
+            app:layout_constraintTop_toBottomOf="@id/project_dots_lines"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/capsules_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_capsule_label"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/time_capsules_link"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:onClick="visitTaggedSite"
+                android:tag="@string/time_capsules_link"
+                android:text="@string/time_capsules_link"
+                android:textColor="@color/link_color"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/time_capsules_description"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/time_capsules_description"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/therapy_inov_before_after"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_rectangle"
+            android:onClick="toggleProjectView"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/project_time_capsule">
+
+            <TextView
+                android:id="@+id/therapy_inov_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/therapy_inov_before_after_label"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/website_link_anchor"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/see_anchor"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/website_link_before"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="visitTaggedSite"
+                android:tag="@string/therapy_inov_before_link"
+                android:text="@string/before_anchor"
+                android:textColor="@color/link_color"
+
+                app:layout_constraintLeft_toRightOf="@id/website_link_anchor"
+                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
+
+            <TextView
+                android:id="@+id/website_link_anchor2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/and_anchor"
+
+                app:layout_constraintLeft_toRightOf="@id/website_link_before"
+                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
+
+            <TextView
+                android:id="@+id/website_link_after"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="visitTaggedSite"
+                android:tag="@string/therapy_inov_after_link"
+                android:text="@string/after_anchor"
+                android:textColor="@color/link_color"
+
+                app:layout_constraintLeft_toRightOf="@id/website_link_anchor2"
+                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
+
+            <TextView
+                android:id="@+id/website_description"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/therapy_inov_description_short"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/project_pcrs_jslinux"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_rectangle"
+            android:onClick="toggleProjectView"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/therapy_inov_before_after">
+
+            <TextView
+                android:id="@+id/pcrs_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pcrs_jslinux_label"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pcrs_link"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:onClick="visitTaggedSite"
+                android:tag="@string/pcrs_jslinux_link"
+                android:text="@string/pcrs_jslinux_link"
+                android:textColor="@color/link_color"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pcrs_description"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/uoft_description"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
             android:id="@+id/project_memories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_rectangle"
-
             android:onClick="toggleProjectView"
-            app:layout_constraintBottom_toTopOf="@id/therapy_inov_before_after"
+
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/project_dots_lines">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/project_pcrs_jslinux">
 
             <TextView
                 android:id="@+id/memories_label"
@@ -186,88 +317,6 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/memories_description"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/therapy_inov_before_after"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_rectangle"
-
-            android:onClick="toggleProjectView"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/project_memories">
-
-            <TextView
-                android:id="@+id/therapy_inov_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/therapy_inov_before_after_label"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp"
-                android:textStyle="bold"
-
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/website_link_anchor"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:text="See "
-
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/website_link_before"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:onClick="visitTaggedSite"
-                android:tag="@string/therapy_inov_before_link"
-                android:text="before "
-                android:textColor="@color/link_color"
-
-                app:layout_constraintLeft_toRightOf="@id/website_link_anchor"
-                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
-
-            <TextView
-                android:id="@+id/website_link_anchor2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:text="and "
-
-                app:layout_constraintLeft_toRightOf="@id/website_link_before"
-                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
-
-            <TextView
-                android:id="@+id/website_link_after"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:onClick="visitTaggedSite"
-                android:tag="@string/therapy_inov_after_link"
-                android:text="after."
-                android:textColor="@color/link_color"
-
-                app:layout_constraintLeft_toRightOf="@id/website_link_anchor2"
-                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
-
-            <TextView
-                android:id="@+id/website_description"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/therapy_inov_description_short"
                 android:textColor="@color/black"
                 android:textSize="15sp"
 
