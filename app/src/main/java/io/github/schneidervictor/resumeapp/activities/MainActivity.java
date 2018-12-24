@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		ImageView profilePic = findViewById(R.id.profile_pic);
+		ImageView profilePic = findViewById(R.id.app_logo);
 		ImageView ring = findViewById(R.id.ring);
 		
 		startPulsingAnimation(profilePic, 1.2f);
-		startGrowingAnimation(ring, 1.5f);
+		startGrowingAnimation(ring, 1.75f);
 	}
 	
 	/**

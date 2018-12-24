@@ -89,7 +89,7 @@
                 android:id="@+id/website_link_anchor2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="and "
+                android:text="&amp; "
 
                 app:layout_constraintLeft_toRightOf="@id/website_link_before"
                 app:layout_constraintTop_toTopOf="@id/website_link_anchor" />

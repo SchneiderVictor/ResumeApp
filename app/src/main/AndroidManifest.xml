@@ -6,7 +6,7 @@
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/profile_pic"
+        android:roundIcon="@drawable/app_logo_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 

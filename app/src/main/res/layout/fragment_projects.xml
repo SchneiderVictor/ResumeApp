@@ -166,7 +166,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/see_anchor"
+                android:text="See "
 
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -177,7 +177,7 @@
                 android:layout_height="0dp"
                 android:onClick="visitTaggedSite"
                 android:tag="@string/therapy_inov_before_link"
-                android:text="@string/before_anchor"
+                android:text="before "
                 android:textColor="@color/link_color"
 
                 app:layout_constraintLeft_toRightOf="@id/website_link_anchor"
@@ -187,7 +187,7 @@
                 android:id="@+id/website_link_anchor2"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="@string/and_anchor"
+                android:text="&amp; "
 
                 app:layout_constraintLeft_toRightOf="@id/website_link_before"
                 app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
@@ -198,7 +198,7 @@
                 android:layout_height="0dp"
                 android:onClick="visitTaggedSite"
                 android:tag="@string/therapy_inov_after_link"
-                android:text="@string/after_anchor"
+                android:text="after."
                 android:textColor="@color/link_color"
 
                 app:layout_constraintLeft_toRightOf="@id/website_link_anchor2"

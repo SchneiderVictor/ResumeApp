@@ -184,9 +184,6 @@
         \n\nPlease note that if you have the respective app installed, it will be launched. Otherwise,
         you will be your internet browser will be launched. (This does not apply to the phone &amp; email
         links of course!)</string>
-    <string name="see_anchor">See\ </string>
-    <string name="before_anchor">before\ </string>
-    <string name="and_anchor">&amp;\ </string>
-    <string name="after_anchor">after.</string>
     <string name="time_capsule_label">Time Capsules website</string>
+    <string name="tap_logo_prompt">Tap the logo to begin!</string>
 </resources>
