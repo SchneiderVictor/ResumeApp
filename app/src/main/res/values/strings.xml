@@ -61,12 +61,13 @@
     <string name="uoft_job_title">Volunteer Web Developer</string>
     <string name="b2b_job_title">Bilingual Administration Officer</string>
 
-    <string name="therapy_inov_location">Therapy Innovation Inc. | Toronto, ON</string>
-    <string name="therapy_inov_period">October 2018 – Present</string>
-    <string name="uoft_location">University of Toronto, St. George Campus | Toronto, ON</string>
+    <string name="therapy_inov_location">Therapy Innovation Inc. | Toronto, ON, CAN</string>
+    <string name="therapy_inov_period">October 2018 – February 2019</string>
+    <string name="uoft_location">University of Toronto, St. George Campus | Toronto, ON, CAN</string>
     <string name="uoft_period">May 2018 – August 2018</string>
-    <string name="b2b_location">B2B Bank Head Office | Toronto, ON</string>
-    <string name="b2b_period">January 2016 - Present</string>
+    <string name="b2b_location">B2B Bank Head Office | Toronto, ON, CAN</string>
+    <string name="b2b_period">January 2016 - August 2019</string>
+    <string name="google_period">September 2019 - present</string>
 
     <string name="therapy_inov_description">Responsible for developing an ongoing prototype Android application for the start-up.
 
@@ -76,6 +77,7 @@
 
         \n\nTook the initiative to redesign the company website, <b>increasing website responsivity
         &amp; improving UI</b> by using Bootstrap.
+    </string><string name="google_description"><b>I will be joining Google as part of their Engineering Residency program in September!</b>
     </string>
     <string name="therapy_inov_description_short">
         I have taken the initiative to redesign the company website, <b>increasing website responsivity
@@ -126,14 +128,12 @@
     <string name="uoft_campus">University of Toronto, St. George Campus</string>
     <string name="program_label">Honours Bachelor of Science in Life Sciences</string>
     <string name="graduation_date">Graduating in: June 2019</string>
-    <string name="uoft_edu_details"><b>GPA:</b> 3.11 / 4.0
+    <string name="uoft_edu_details"><b>GPA:</b> 3.13 / 4.0
 
         \n\n<b>Programs:</b>
             \n\t\tMajor in Human Biology
             \n\t\tMajor in Pharmacology
             \n\t\tMinor in Computer Science
-
-        \n\nCurrently learning full web development.
     </string>
 
     <string name="pcrs_jslinux_label">PCRS_JSLINUX</string>
@@ -186,4 +186,11 @@
         links of course!)</string>
     <string name="time_capsule_label">Time Capsules website</string>
     <string name="tap_logo_prompt">Tap the logo to begin!</string>
+    <string name="google_job_title">Engineering Resident</string>
+    <string name="google_location">Mountain View, CA, USA</string>
+    <string name="languages_skill_header">Languages</string>
+    <string name="skill_platform_header">Platforms</string>
+    <string name="skill_tools_header">Tools/Libraries</string>
+    <string name="js_skill_label">JAVASCRIPT</string>
+    <string name="react_skill_label">REACT</string>
 </resources>
