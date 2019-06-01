@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/home_icon"
-        android:title="@string/home_label" />
+        android:id="@+id/navigation_work"
+        android:icon="@drawable/work_icon"
+        android:title="@string/work_label" />
 
     <item
         android:id="@+id/navigation_projects"
         android:icon="@drawable/projects_icon"
         android:title="@string/projects_label" />
-
-    <item
-        android:id="@+id/navigation_work"
-        android:icon="@drawable/work_icon"
-        android:title="@string/work_label" />
 
     <item
         android:id="@+id/navigation_contact"

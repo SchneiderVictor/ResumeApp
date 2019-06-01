@@ -134,48 +134,6 @@
                 app:layout_constraintTop_toBottomOf="@id/job_location_1" />
 
             <TextView
-                android:id="@+id/website_link_anchor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="See "
-
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/job_period_1" />
-
-            <TextView
-                android:id="@+id/website_link_before"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="visitTaggedSite"
-                android:tag="@string/therapy_inov_before_link"
-                android:text="before "
-                android:textColor="@color/link_color"
-
-                app:layout_constraintLeft_toRightOf="@id/website_link_anchor"
-                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
-
-            <TextView
-                android:id="@+id/website_link_anchor2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="&amp; "
-
-                app:layout_constraintLeft_toRightOf="@id/website_link_before"
-                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
-
-            <TextView
-                android:id="@+id/website_link_after"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="visitTaggedSite"
-                android:tag="@string/therapy_inov_after_link"
-                android:text="after."
-                android:textColor="@color/link_color"
-
-                app:layout_constraintLeft_toRightOf="@id/website_link_anchor2"
-                app:layout_constraintTop_toTopOf="@id/website_link_anchor" />
-
-            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"

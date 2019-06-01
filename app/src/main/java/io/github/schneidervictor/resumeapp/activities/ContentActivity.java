@@ -30,9 +30,8 @@ import java.util.List;
 import io.github.schneidervictor.resumeapp.R;
 import io.github.schneidervictor.resumeapp.adapters.WorkPagerAdapter;
 import io.github.schneidervictor.resumeapp.containers.ContactInfoContainer;
-import io.github.schneidervictor.resumeapp.dialogs.WelcomeDialog;
+import io.github.schneidervictor.resumeapp.dialogs.MessageDialog;
 import io.github.schneidervictor.resumeapp.fragments.ContactFragment;
-import io.github.schneidervictor.resumeapp.fragments.HomeFragment;
 import io.github.schneidervictor.resumeapp.fragments.ProjectsFragment;
 import io.github.schneidervictor.resumeapp.fragments.WorkFragment;
 import io.github.schneidervictor.resumeapp.listeners.OnTabsReadyListener;
@@ -52,7 +51,6 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 	private View contentContainer;
 	
 	// UI fragment containers
-	private HomeFragment homeFragment = new HomeFragment();
 	private ProjectsFragment projectsFragment = new ProjectsFragment();
 	private WorkFragment workFragment = new WorkFragment();
 	private ContactFragment contactFragment = new ContactFragment();
@@ -66,9 +64,6 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 		@Override
 		public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 			switch (item.getItemId()) {
-				case R.id.navigation_home:
-					setFragment(homeFragment, true);
-					return true;
 				case R.id.navigation_projects:
 					setFragment(projectsFragment, true);
 					return true;
@@ -104,8 +99,8 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 		
 		workFragment.setListener(this);
 		
-		// set the HomeFragment as default
-		setFragment(homeFragment, true);
+		// set the WorkFragment as default
+		setFragment(workFragment, true);
 	}
 	
 	/**
@@ -117,13 +112,24 @@ public class ContentActivity extends AppCompatActivity implements OnTabsReadyLis
 				.getBoolean("isFirstRun", true);
 		
 		if (isFirstRun) {
-			new WelcomeDialog().show(getSupportFragmentManager(), null);
+			MessageDialog message = new MessageDialog();
+			message.setLayout(R.layout.dialog_welcome);
+			message.show(getSupportFragmentManager(), null);
 			
 			getSharedPreferences("PREFERENCE", MODE_PRIVATE)
 					.edit()
 					.putBoolean("isFirstRun", false)
 					.apply();
 		}
+	}
+	
+	/**
+	 * Shows the intro message
+	 */
+	public void showIntroMessage(View view) {
+		MessageDialog message = new MessageDialog();
+		message.setLayout(R.layout.dialog_intro);
+		message.show(getSupportFragmentManager(), null);
 	}
 	
 	/**

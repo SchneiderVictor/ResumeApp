@@ -14,9 +14,14 @@ import io.github.schneidervictor.resumeapp.R;
 /**
  * DialogFragment for the welcome message
  */
-public class WelcomeDialog extends DialogFragment {
+public class MessageDialog extends DialogFragment {
+	private int layout;
 	
-	public WelcomeDialog() {
+	public MessageDialog() {
+	}
+	
+	public void setLayout(int layout) {
+		this.layout = layout;
 	}
 	
 	@NonNull
@@ -25,7 +30,7 @@ public class WelcomeDialog extends DialogFragment {
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		// Get the layout inflater
 		LayoutInflater inflater = getActivity().getLayoutInflater();
-		View layout = inflater.inflate(R.layout.dialog_welcome, null);
+		View layout = inflater.inflate(this.layout, null);
 		
 		builder.setView(layout)
 				.setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() {
