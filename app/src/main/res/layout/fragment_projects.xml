@@ -187,7 +187,7 @@
 
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/therapy_inov_before_after">
+            app:layout_constraintTop_toBottomOf="@id/project_time_capsule">
 
             <TextView
                 android:id="@+id/pcrs_label"
